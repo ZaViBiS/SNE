@@ -19,7 +19,7 @@
 
 ##### Building
 
-- `git clone https://github.com/TalleoProject/Talleo.git`
+- `git clone https://github.com/ZaViBiS/SNE.git`
 - `cd Talleo`
 - `rm -rf build; mkdir -p build/release; cd build/release`
 - `cmake -D STATIC=ON -D ARCH="default" -D CMAKE_BUILD_TYPE=Release ../..`
@@ -33,7 +33,7 @@
     - `sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6`
     - `sudo update-alternatives --set gcc /usr/bin/gcc-6`
   3. Cleanup build tree by removing all files in directory `build/release` and its subdirectories, reconfigure and recompile
-- Ubuntu packages for rocksdb can be incompatible with Talleo as sometimes those are built without RTTI, RTTI is required by Talleo, uninstalling `librocksdb-dev` will make the build system use rocksdb from source tree
+- Ubuntu packages for rocksdb can be incompatible with SNE as sometimes those are built without RTTI, RTTI is required by SNE, uninstalling `librocksdb-dev` will make the build system use rocksdb from source tree
 
 #### Apple
 
@@ -45,15 +45,15 @@
 
 ##### Building
 
-- `git clone https://github.com/TalleoProject/Talleo.git`
-- `cd Talleo`
+- `git clone https://github.com/ZaViBiS/SNE.git`
+- `cd SNE`
 - `rm -rf build; mkdir -p build/release; cd build/release`
 - `cmake ../..` or `cmake -DBOOST_ROOT=<path_to_boost_install> ../..` when building from a specific boost install. If you used brew to install boost, your path is most likely `/usr/local/include/boost.`
 - `cmake --build .`
 
 The binaries will be in `./src` after compilation is complete.
 
-Run `./src/Talleod` to connect to the network and let it sync (it may take a while).
+Run `./src/SNEd` to connect to the network and let it sync (it may take a while).
 
 #### Windows 10
 
@@ -67,20 +67,17 @@ NOTE: If you have Visual Studio 2017.9 Community, you will need to use [Boost 1.
 ##### Building
 
 - From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.
-- `cd <your_Talleo_directory>`
+- `cd <your_SNE_directory>`
 - `mkdir build`
 - `cd build`
 - Set the PATH variable for cmake: ie. `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
-- `cmake -DBOOST_ROOT=C:\local\boost_1_64_0 -DBOOST_LIBRARYDIR=C:\local\boost_1_64_0\lib64-msvc-14.0 -G "Visual Studio 14 Win64" C:\...\Talleo
-- `Open Talleo.sln in "Visual Studio" and compile the binaries
+- `cmake -DBOOST_ROOT=C:\local\boost_1_64_0 -DBOOST_LIBRARYDIR=C:\local\boost_1_64_0\lib64-msvc-14.0 -G "Visual Studio 14 Win64" C:\...\SNE
+- `Open SNE.sln in "Visual Studio" and compile the binaries
 - If all went well, it will complete successfully, and you will find all your binaries in the '..\build\src\Release' directory.
 - Additionally, a `.sln` file will have been created in the `build` directory. If you wish to open the project in Visual Studio with this, you can.
 
 #### Thanks
-Cryptonote Developers, Bytecoin Developers, Monero Developers, TurtleCoin Developers, Forknote Project, PinkstarcoinV2 Developers, Bittorium Developers, Talleo developers.
+Cryptonote Developers, Bytecoin Developers, Monero Developers, TurtleCoin Developers, Forknote Project, PinkstarcoinV2 Developers, Bittorium Developers, SNE developers.
 
-#### Donate
-Donate to our project and help us achieve more for you!  
-Our BTC Address:   1D1YBHmFkd4J7bEG6PYfZBLoXtp98hKsfw
 
 

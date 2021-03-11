@@ -149,7 +149,8 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
 const char* const SEED_NODES[] = {
   "192.168.31.77:3302",
-  "127.0.0.1:3302"
+  "127.0.0.1:3302",
+  "188.227.107.179:3302"
 };
 } // CryptoNote
 

@@ -49,8 +49,8 @@ static_assert(0 < UPGRADE_VOTING_THRESHOLD && UPGRADE_VOTING_THRESHOLD <= 100, "
 static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(18446744);
-const unsigned EMISSION_SPEED_FACTOR                         = 25;
+const uint64_t MONEY_SUPPLY                                  = (uint64_t)(-1);
+const unsigned EMISSION_SPEED_FACTOR                         = 24;
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(1000);
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -126,7 +126,7 @@ const uint8_t  BLOCK_MINOR_VERSION_0                         =  0;
 const uint8_t  BLOCK_MINOR_VERSION_1                         =  1;
 
 const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by default, blocks ids count in synchronizing
-const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
+const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  10000;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
 const int      P2P_DEFAULT_PORT                              =  3302;

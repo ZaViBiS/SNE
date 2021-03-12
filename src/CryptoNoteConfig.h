@@ -115,6 +115,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 
 const char     CRYPTONOTE_NAME[]                             = "SNE";
 const char     CRYPTONOTE_TICKER[]                           = "SNE";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001e8070223f145bbb9a3a16976cbf544e1f4e756ce3b97452d10b38220630892e8cc232e2101fd1879a0a35d6d18b3666aec0ee9fc10192191f48af4e6dadf02a508ffb989d3";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;

@@ -32,13 +32,13 @@ const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 const size_t   CRYPTONOTE_MAX_SAFE_TX_SIZE                   = 115000;
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0xb1397; // SNE
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 1;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 const uint64_t DIFFICULTY_TARGET                             = 10; // seconds
-const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 8640 / DIFFICULTY_TARGET;
+const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
 const uint32_t UPGRADE_HEIGHT_V2                             = 1;
 const uint32_t UPGRADE_HEIGHT_V3                             = 10000; // Upgrade height for LWMA-2
@@ -51,7 +51,7 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = (uint64_t)(-1);
 const unsigned EMISSION_SPEED_FACTOR                         = 24;
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(1000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(10000000);
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
@@ -145,12 +145,11 @@ const uint32_t P2P_DEFAULT_CONNECTION_TIMEOUT                = 5000;          //
 const uint32_t P2P_DEFAULT_PING_CONNECTION_TIMEOUT           = 2000;          // 2 seconds
 const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT                    = 60 * 2 * 1000; // 2 minutes
 const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          // 5 seconds
-const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
+const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
 
 const char* const SEED_NODES[] = {
-  "192.168.31.77:3302",
-  "127.0.0.1:3302",
-  "188.227.107.179:3302"
+  "188.227.107.179:3302",
+  "188.227.85.112:3302"
 };
 } // CryptoNote
 

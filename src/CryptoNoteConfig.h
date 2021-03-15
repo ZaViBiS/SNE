@@ -27,12 +27,12 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
+const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 100000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 const size_t   CRYPTONOTE_MAX_SAFE_TX_SIZE                   = 115000;
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0xb1397; // SNE
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 1;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 0;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
@@ -50,12 +50,12 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = (uint64_t)(-1);
-const unsigned EMISSION_SPEED_FACTOR                         = 24;
+const unsigned EMISSION_SPEED_FACTOR                         = 50;
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(10000000);
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 10000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000; // Unused!!!
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
@@ -64,7 +64,7 @@ const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2;
 const uint64_t MINIMUM_FEE                                   = 0;
 const uint16_t DEFAULT_MIXIN                                 = 0;
 const uint16_t MINIMUM_MIXIN                                 = 0;
-const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(1);
+const uint64_t DEFAULT_DUST_THRESHOLD                        =  UINT64_C(2);
 
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
 const size_t ZAWY_DIFFICULTY_V2                              = 0;
@@ -88,7 +88,7 @@ const size_t   MAX_BLOCK_SIZE_INITIAL                        = 100000;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR         = 100 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR       = 365 * 24 * 60 * 60 / DIFFICULTY_TARGET;
 
-const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS     = 1;
+const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS     = 2;
 const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS    = DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS;
 
 const uint64_t CRYPTONOTE_MEMPOOL_TX_LIVETIME                = 60 * 60 * 24;     //seconds, one day
@@ -115,7 +115,6 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 
 const char     CRYPTONOTE_NAME[]                             = "SNE";
 const char     CRYPTONOTE_TICKER[]                           = "SNE";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001e8070223f145bbb9a3a16976cbf544e1f4e756ce3b97452d10b38220630892e8cc232e2101fd1879a0a35d6d18b3666aec0ee9fc10192191f48af4e6dadf02a508ffb989d3";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -146,11 +145,11 @@ const uint32_t P2P_DEFAULT_CONNECTION_TIMEOUT                = 5000;          //
 const uint32_t P2P_DEFAULT_PING_CONNECTION_TIMEOUT           = 2000;          // 2 seconds
 const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT                    = 60 * 2 * 1000; // 2 minutes
 const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          // 5 seconds
-const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
+const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = ""; // 8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115
 
 const char* const SEED_NODES[] = {
-  "188.227.107.179:3302",
-  "188.227.85.112:3302"
+  "192.168.31.77:3302",
+  "127.0.0.1:3302"
 };
 } // CryptoNote
 

@@ -6,3 +6,4 @@ cmake -D STATIC=ON -D ARCH="default" -D CMAKE_BUILD_TYPE=Release ../..;
 cmake --build .
 
 
+# rm -rf build; mkdir -p build/release; cd build/release && cmake -D STATIC=ON -D ARCH="default" -D CMAKE_BUILD_TYPE=Release ../.. && make -j8

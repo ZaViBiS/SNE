@@ -27,7 +27,7 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 100000000;
+const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 2102400;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 const size_t   CRYPTONOTE_MAX_SAFE_TX_SIZE                   = 115000;
@@ -35,13 +35,13 @@ const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0xb1397; // SNE
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 0;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
-const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
+const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 12;
 
-const uint64_t DIFFICULTY_TARGET                             = 10; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 15; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
 const uint32_t UPGRADE_HEIGHT_V2                             = 1;
-const uint32_t UPGRADE_HEIGHT_V3                             = 10000; // Upgrade height for LWMA-2
+const uint32_t UPGRADE_HEIGHT_V3                             = 1000; // Upgrade height for LWMA-2
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
 const uint32_t UPGRADE_VOTING_WINDOW                         = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
 const uint32_t UPGRADE_WINDOW                                = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
@@ -64,7 +64,7 @@ const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2;
 const uint64_t MINIMUM_FEE                                   = 0;
 const uint16_t DEFAULT_MIXIN                                 = 0;
 const uint16_t MINIMUM_MIXIN                                 = 0;
-const uint64_t DEFAULT_DUST_THRESHOLD                        =  UINT64_C(2);
+const uint64_t DEFAULT_DUST_THRESHOLD                        =  UINT64_C(0);
 
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
 const size_t ZAWY_DIFFICULTY_V2                              = 0;
@@ -113,7 +113,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "SNE";
+const char     CRYPTONOTE_NAME[]                             = "sne";
 const char     CRYPTONOTE_TICKER[]                           = "SNE";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
@@ -145,7 +145,7 @@ const uint32_t P2P_DEFAULT_CONNECTION_TIMEOUT                = 5000;          //
 const uint32_t P2P_DEFAULT_PING_CONNECTION_TIMEOUT           = 2000;          // 2 seconds
 const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT                    = 60 * 2 * 1000; // 2 minutes
 const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          // 5 seconds
-const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = ""; // 8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115
+const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115"; // 8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115
 
 const char* const SEED_NODES[] = {
   "192.168.31.77:3302",

@@ -28,6 +28,7 @@ namespace CryptoNote {
 namespace parameters {
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 2102400;
+const uint32_t KILL_HEIGHT                                   = 2102400;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 const size_t   CRYPTONOTE_MAX_SAFE_TX_SIZE                   = 115000;

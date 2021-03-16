@@ -13,14 +13,14 @@
 
 - You will need the following packages: boost (1.67), cmake, git, gcc (7.x), g++ (7.x), make, and python3.
 - `sudo apt-get update`
-- `sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost1.67-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev`
-- `sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70`
+- `sudo apt-get -y install build-essential python3-dev gcc g++ git cmake libboost-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev`
+- `sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 70`
 - `sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70`
 
 ##### Building
 
 - `git clone https://github.com/ZaViBiS/SNE.git`
-- `cd Talleo`
+- `cd SNE`
 - `rm -rf build; mkdir -p build/release; cd build/release`
 - `cmake -D STATIC=ON -D ARCH="default" -D CMAKE_BUILD_TYPE=Release ../..`
 - `cmake --build .`
